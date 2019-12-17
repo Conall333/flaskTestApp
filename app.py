@@ -1,9 +1,7 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request, redirect, url_for
 
 # create an instance of a flask app
 app = Flask(__name__)
-
-
 
 
 @app.route("/")
@@ -22,4 +20,9 @@ def username(username=None,post_id=None):
 
 @app.route('/submit_form', methods=['POST', 'GET'])
 def submit_form():
-    return 'form submitted'
+    if request.method == 'POST':
+        data = request.form.to_dict()
+        print(data)
+        return redirect('/thankyou.html')
+    else:
+        return 'try again'
