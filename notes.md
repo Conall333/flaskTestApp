@@ -13,3 +13,8 @@
     * css and js should be in static folder
     * Flask uses a templating engine anything in {{ }} is evaluated as python
     * Variable Rules
+    
+* docker-compose.yml
+    * `container_name` to define name for each container
+    * `restart: unless stopped` -> containers will only be stopped when the docker engine is stopped/restarted
+    * `environment` -> contains enviroment variables that are passed to the container
