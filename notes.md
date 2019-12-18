@@ -1,6 +1,7 @@
 <h2>Notes</h2>
 
 * Setup
+    * to create virtual enviroment `virtualenv -p python3 venv` 
     * To activate virtual Environment:`source bin/activate` --> when in virtual env directory   
     * To install Flask: `pip3 install flask`  
     * To run the server: `export FLASK_APP=server.py`
